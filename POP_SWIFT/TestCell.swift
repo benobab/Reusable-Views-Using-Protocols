@@ -15,6 +15,11 @@ class TestCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
 
     //MARK:Variables
+    var item:String? = nil{
+        didSet{
+            self.titleLabel.text = item
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

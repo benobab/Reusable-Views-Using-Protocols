@@ -44,7 +44,7 @@ extension TableReusableVC:UITableViewDelegate,UITableViewDataSource{
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         //TODO
         let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as TestCell
-        cell.titleLabel.text = items[indexPath.row]
+        cell.item = items[indexPath.row]
         return cell
     }
 }
