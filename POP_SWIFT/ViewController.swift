@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     //MARK:Outlets from view
     
+    @IBOutlet weak var goTableButton: ButtonShakeable!
     @IBOutlet weak var shabeableButton: ButtonShakeable!
     //MARK:Variables
     
@@ -28,6 +29,11 @@ class ViewController: UIViewController {
     
     //MARK:Actions From View
     
+    @IBAction func goTableButtonClicked(sender: ButtonShakeable) {
+        sender.shake()
+        let destVC = storyboard?.instantiateViewControllerWithIdentifier("tableVC") as! TableReusableVC
+        self.navigationController?.pushViewController(destVC, animated: true)
+    }
     
     @IBAction func shakeableButtonClicked(sender: ButtonShakeable) {
         sender.shake()

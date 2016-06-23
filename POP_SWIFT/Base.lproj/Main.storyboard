@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LeK-I5-39k">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,32 +19,112 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ttK-Re-0sG" customClass="ButtonShakeable" customModule="POP_SWIFT" customModuleProvider="target">
-                                <rect key="frame" x="242" y="260" width="117" height="79"/>
+                                <rect key="frame" x="233" y="260" width="135" height="79"/>
                                 <color key="backgroundColor" red="0.17254902420000001" green="0.3960784376" blue="0.090196080509999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="79" id="jr2-wO-el4"/>
-                                    <constraint firstAttribute="width" constant="117" id="ss2-DE-4cj"/>
+                                    <constraint firstAttribute="width" constant="135" id="ss2-DE-4cj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Shake Me">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="shakeableButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KM2-lE-CPA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ti5-lM-itg" customClass="ButtonShakeable" customModule="POP_SWIFT" customModuleProvider="target">
+                                <rect key="frame" x="233" y="347" width="135" height="79"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.58431372550000005" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="135" id="MwN-Df-nJq"/>
+                                    <constraint firstAttribute="height" constant="79" id="aat-Tv-jDo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="TableViewController">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="goTableButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="51p-yF-GIp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ti5-lM-itg" firstAttribute="top" secondItem="ttK-Re-0sG" secondAttribute="bottom" constant="8" id="66m-We-3MU"/>
                             <constraint firstItem="ttK-Re-0sG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NHr-BX-ou2"/>
                             <constraint firstItem="ttK-Re-0sG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dbX-fe-nKa"/>
+                            <constraint firstItem="ti5-lM-itg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jkA-yk-BLX"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="gCa-Uv-6g6"/>
                     <connections>
+                        <outlet property="goTableButton" destination="ti5-lM-itg" id="6tG-hq-XiF"/>
                         <outlet property="shabeableButton" destination="ttK-Re-0sG" id="swv-mH-za3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1274" y="517"/>
+        </scene>
+        <!--Table ReusableVC-->
+        <scene sceneID="bcd-ld-2i0">
+            <objects>
+                <viewController storyboardIdentifier="tableVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sOK-fW-4wC" customClass="TableReusableVC" customModule="POP_SWIFT" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dGC-bM-wUH"/>
+                        <viewControllerLayoutGuide type="bottom" id="U23-0v-cCh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b6D-aQ-cyn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="enM-Qm-Km2">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="gFG-gw-hhX">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gFG-gw-hhX" id="oD0-VN-w3K">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="enM-Qm-Km2" firstAttribute="leading" secondItem="b6D-aQ-cyn" secondAttribute="leadingMargin" constant="-20" id="BUI-qQ-exn"/>
+                            <constraint firstItem="enM-Qm-Km2" firstAttribute="top" secondItem="b6D-aQ-cyn" secondAttribute="topMargin" id="PGu-sA-yuC"/>
+                            <constraint firstItem="U23-0v-cCh" firstAttribute="top" secondItem="enM-Qm-Km2" secondAttribute="bottom" id="dSE-iA-llI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="enM-Qm-Km2" secondAttribute="trailing" constant="-20" id="xp0-gF-Vrx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="enM-Qm-Km2" id="V2j-9p-2Np"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jai-xj-zeJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1983" y="517"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="q06-2Q-aHU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LeK-I5-39k" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wSc-lB-dFV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="R0O-xU-TbM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="alB-iB-OxL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="565" y="517"/>
         </scene>

@@ -16,6 +16,11 @@
 		E22C5C5B1D1AF205003DB91D /* POP_SWIFTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22C5C5A1D1AF205003DB91D /* POP_SWIFTUITests.swift */; };
 		E22C5CA41D1BD091003DB91D /* Shakeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22C5CA31D1BD091003DB91D /* Shakeable.swift */; };
 		E22C5CA71D1BD0EE003DB91D /* ButtonShakeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22C5CA61D1BD0EE003DB91D /* ButtonShakeable.swift */; };
+		E22C5CAB1D1BD359003DB91D /* TableReusableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22C5CAA1D1BD359003DB91D /* TableReusableVC.swift */; };
+		E22C5CAD1D1BD3DD003DB91D /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22C5CAC1D1BD3DD003DB91D /* ReusableView.swift */; };
+		E22C5CAF1D1BD440003DB91D /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22C5CAE1D1BD440003DB91D /* NibLoadableView.swift */; };
+		E22C5CB21D1BD48D003DB91D /* TestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22C5CB11D1BD48D003DB91D /* TestCell.swift */; };
+		E22C5CB41D1BD67F003DB91D /* TestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E22C5CB31D1BD67F003DB91D /* TestCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,11 @@
 		E22C5C5C1D1AF205003DB91D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E22C5CA31D1BD091003DB91D /* Shakeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shakeable.swift; sourceTree = "<group>"; };
 		E22C5CA61D1BD0EE003DB91D /* ButtonShakeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonShakeable.swift; sourceTree = "<group>"; };
+		E22C5CAA1D1BD359003DB91D /* TableReusableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableReusableVC.swift; sourceTree = "<group>"; };
+		E22C5CAC1D1BD3DD003DB91D /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		E22C5CAE1D1BD440003DB91D /* NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
+		E22C5CB11D1BD48D003DB91D /* TestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCell.swift; sourceTree = "<group>"; };
+		E22C5CB31D1BD67F003DB91D /* TestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				E22C5CA31D1BD091003DB91D /* Shakeable.swift */,
+				E22C5CAC1D1BD3DD003DB91D /* ReusableView.swift */,
+				E22C5CAE1D1BD440003DB91D /* NibLoadableView.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -149,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				E22C5C3C1D1AF205003DB91D /* ViewController.swift */,
+				E22C5CAA1D1BD359003DB91D /* TableReusableVC.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -156,11 +169,21 @@
 		E22C5CA91D1BD114003DB91D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E22C5CB01D1BD47C003DB91D /* Cells */,
 				E22C5C431D1AF205003DB91D /* LaunchScreen.storyboard */,
 				E22C5C3E1D1AF205003DB91D /* Main.storyboard */,
 				E22C5C411D1AF205003DB91D /* Assets.xcassets */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		E22C5CB01D1BD47C003DB91D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E22C5CB11D1BD48D003DB91D /* TestCell.swift */,
+				E22C5CB31D1BD67F003DB91D /* TestCell.xib */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E22C5C451D1AF205003DB91D /* LaunchScreen.storyboard in Resources */,
+				E22C5CB41D1BD67F003DB91D /* TestCell.xib in Resources */,
 				E22C5C421D1AF205003DB91D /* Assets.xcassets in Resources */,
 				E22C5C401D1AF205003DB91D /* Main.storyboard in Resources */,
 			);
@@ -295,8 +319,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E22C5CA71D1BD0EE003DB91D /* ButtonShakeable.swift in Sources */,
+				E22C5CB21D1BD48D003DB91D /* TestCell.swift in Sources */,
 				E22C5C3D1D1AF205003DB91D /* ViewController.swift in Sources */,
+				E22C5CAF1D1BD440003DB91D /* NibLoadableView.swift in Sources */,
 				E22C5CA41D1BD091003DB91D /* Shakeable.swift in Sources */,
+				E22C5CAD1D1BD3DD003DB91D /* ReusableView.swift in Sources */,
+				E22C5CAB1D1BD359003DB91D /* TableReusableVC.swift in Sources */,
 				E22C5C3B1D1AF205003DB91D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
