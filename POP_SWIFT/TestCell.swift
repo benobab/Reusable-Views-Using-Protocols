@@ -17,7 +17,7 @@ class TestCell: UITableViewCell {
     //MARK:Variables
     var item:String? = nil{
         didSet{
-            self.titleLabel.text = item
+            updateView()
         }
     }
     
@@ -30,6 +30,10 @@ class TestCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func updateView(){
+        self.titleLabel.text = item
     }
 
 }
