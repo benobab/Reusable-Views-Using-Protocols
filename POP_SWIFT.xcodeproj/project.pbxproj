@@ -14,6 +14,8 @@
 		E22C5C451D1AF205003DB91D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E22C5C431D1AF205003DB91D /* LaunchScreen.storyboard */; };
 		E22C5C501D1AF205003DB91D /* POP_SWIFTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22C5C4F1D1AF205003DB91D /* POP_SWIFTTests.swift */; };
 		E22C5C5B1D1AF205003DB91D /* POP_SWIFTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22C5C5A1D1AF205003DB91D /* POP_SWIFTUITests.swift */; };
+		E22C5CA41D1BD091003DB91D /* Shakeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22C5CA31D1BD091003DB91D /* Shakeable.swift */; };
+		E22C5CA71D1BD0EE003DB91D /* ButtonShakeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22C5CA61D1BD0EE003DB91D /* ButtonShakeable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		E22C5C561D1AF205003DB91D /* POP_SWIFTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = POP_SWIFTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E22C5C5A1D1AF205003DB91D /* POP_SWIFTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POP_SWIFTUITests.swift; sourceTree = "<group>"; };
 		E22C5C5C1D1AF205003DB91D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E22C5CA31D1BD091003DB91D /* Shakeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shakeable.swift; sourceTree = "<group>"; };
+		E22C5CA61D1BD0EE003DB91D /* ButtonShakeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonShakeable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +101,11 @@
 		E22C5C391D1AF205003DB91D /* POP_SWIFT */ = {
 			isa = PBXGroup;
 			children = (
+				E22C5CA91D1BD114003DB91D /* Views */,
+				E22C5CA81D1BD10F003DB91D /* Controllers */,
+				E22C5CA51D1BD0D4003DB91D /* Custom Views */,
+				E22C5CA21D1BD083003DB91D /* Protocols */,
 				E22C5C3A1D1AF205003DB91D /* AppDelegate.swift */,
-				E22C5C3C1D1AF205003DB91D /* ViewController.swift */,
-				E22C5C3E1D1AF205003DB91D /* Main.storyboard */,
-				E22C5C411D1AF205003DB91D /* Assets.xcassets */,
-				E22C5C431D1AF205003DB91D /* LaunchScreen.storyboard */,
 				E22C5C461D1AF205003DB91D /* Info.plist */,
 			);
 			path = POP_SWIFT;
@@ -123,6 +127,40 @@
 				E22C5C5C1D1AF205003DB91D /* Info.plist */,
 			);
 			path = POP_SWIFTUITests;
+			sourceTree = "<group>";
+		};
+		E22C5CA21D1BD083003DB91D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E22C5CA31D1BD091003DB91D /* Shakeable.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		E22C5CA51D1BD0D4003DB91D /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				E22C5CA61D1BD0EE003DB91D /* ButtonShakeable.swift */,
+			);
+			name = "Custom Views";
+			sourceTree = "<group>";
+		};
+		E22C5CA81D1BD10F003DB91D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E22C5C3C1D1AF205003DB91D /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		E22C5CA91D1BD114003DB91D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E22C5C431D1AF205003DB91D /* LaunchScreen.storyboard */,
+				E22C5C3E1D1AF205003DB91D /* Main.storyboard */,
+				E22C5C411D1AF205003DB91D /* Assets.xcassets */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +294,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E22C5CA71D1BD0EE003DB91D /* ButtonShakeable.swift in Sources */,
 				E22C5C3D1D1AF205003DB91D /* ViewController.swift in Sources */,
+				E22C5CA41D1BD091003DB91D /* Shakeable.swift in Sources */,
 				E22C5C3B1D1AF205003DB91D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

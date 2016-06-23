@@ -10,6 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    //MARK:Outlets from view
+    
+    @IBOutlet weak var shabeableButton: ButtonShakeable!
+    //MARK:Variables
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,7 +25,12 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    //MARK:Actions From View
+    
+    
+    @IBAction func shakeableButtonClicked(sender: ButtonShakeable) {
+        sender.shake()
+    }
 }
 
